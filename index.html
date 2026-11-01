@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blenda Benny | Depilação a Laser &amp; Estética</title>
+  <meta name="description" content="Blenda Benny — Depilação a Laser & Estética. Aparelho Ácrus HTM Tripla Onda com ponteira resfriada até -10°C e aplicação de Botox (Toxina Botulínica) com resultado natural." />
+  <link rel="icon" type="image/jpeg" href="assets/logo-crop.jpg" />
+  <meta property="og:title" content="Blenda Benny | Depilação a Laser & Estética" />
+  <meta property="og:description" content="Depilação a Laser confortável com tecnologia Ácrus HTM (ponteira resfriada até -10°C) e Botox (Toxina Botulínica) com naturalidade." />
+  <meta property="og:image" content="https://blenda-benny-laser.vercel.app/assets/logo-crop.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Cormorant Garamond (Serif Luxury) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alabaster: '#FFFFFF',
+            glacial: '#F6F8FA',
+            ice: '#EDF2F7',
+            abyssal: '#0D111D',
+            sapphire: '#1B2845',
+            pewter: '#5A6578',
+            silver: '#E2E7EE',
+            champagne: '#C5A880'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          letterSpacing: {
+            editorial: '0.24em',
+            wideLux: '0.16em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FFFFFF;
+      color: #0D111D;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F6F8FA;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+    }
+
+    /* Delicate Ghost Button Transition */
+    .btn-luxury {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      border: 1px solid #0D111D;
+      background: transparent;
+      color: #0D111D;
+      padding: 1.1rem 2.4rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-luxury:hover {
+      background: #0D111D;
+      color: #FFFFFF;
+      border-color: #0D111D;
+      transform: translateY(-1px);
+    }
+
+    .btn-luxury-light {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: transparent;
+      color: #FFFFFF;
+      padding: 1.1rem 2.4rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-luxury-light:hover {
+      background: #FFFFFF;
+      color: #0D111D;
+      border-color: #FFFFFF;
+    }
+
+    /* Hairline borders */
+    .hairline-t { border-top: 1px solid #E2E7EE; }
+    .hairline-b { border-bottom: 1px solid #E2E7EE; }
+    .hairline-l { border-left: 1px solid #E2E7EE; }
+    .hairline-r { border-right: 1px solid #E2E7EE; }
+    .hairline-box { border: 1px solid #E2E7EE; }
+
+    /* Smooth Editorial Image Reveal */
+    .editorial-frame {
+      position: relative;
+      overflow: hidden;
+      background-color: #F6F8FA;
+    }
+    .editorial-frame img {
+      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .editorial-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Treatment Card Active State */
+    .area-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .area-card:hover, .area-card.active {
+      background-color: #F6F8FA;
+      border-color: #1B2845;
+    }
+    .area-card.active .card-indicator {
+      background-color: #0D111D;
+      color: #FFFFFF;
+    }
+
+    /* Individual Clickable Area Pill */
+    .area-pill {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .area-pill:hover {
+      border-color: #0D111D;
+      color: #0D111D;
+    }
+    .area-pill.active {
+      background-color: #0D111D;
+      color: #FFFFFF;
+      border-color: #0D111D;
+    }
+  </style>
+</head>
+<body class="selection:bg-sapphire selection:text-white">
+
+  <!-- ==========================================
+       HEADER / MINIMALIST NAVIGATION BAR
+  =========================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md hairline-b transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+      <!-- Brand Identity with Official Logo Monogram -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-full overflow-hidden border border-silver flex-shrink-0 bg-abyssal flex items-center justify-center shadow-sm">
+          <img src="assets/logo-crop.jpg" alt="Logomarca Blenda Benny Laser" class="w-full h-full object-cover scale-110" />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl md:text-2xl tracking-wider text-abyssal font-normal leading-none">
+            BLENDA BENNY
+          </span>
+          <span class="text-[9px] tracking-[0.28em] text-pewter uppercase mt-1">
+            Depilação a Laser &amp; Estética
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Subtle Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-editorial uppercase text-pewter">
+        <a href="#tecnologia" class="hover:text-abyssal transition-colors">Laser Ácrus</a>
+        <a href="#botox" class="hover:text-abyssal transition-colors text-abyssal font-normal">Botox</a>
+        <a href="#protocolos" class="hover:text-abyssal transition-colors">Áreas &amp; Protocolos</a>
+        <a href="#agenda-itinerante" class="hover:text-abyssal transition-colors">Agenda &amp; Locais</a>
+        <a href="#experiencias" class="hover:text-abyssal transition-colors">Experiências</a>
+      </nav>
+
+      <!-- Direct Instagram & WhatsApp Concierge Links -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/blebsp/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram @blebsp"
+           class="text-[11px] tracking-wideLux uppercase text-pewter hover:text-abyssal font-normal flex items-center gap-1.5 py-2 px-3 border border-transparent hover:border-silver transition-all">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span class="hidden sm:inline">@blebsp</span>
+        </a>
+
+        <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Gostaria%20de%20consultar%20sua%20agenda%20e%20saber%20em%20qual%20local%20voc%C3%AA%20estar%C3%A1%20atendendo."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="text-[11px] tracking-wideLux uppercase text-abyssal font-normal flex items-center gap-1.5 py-2 px-4 border border-silver hover:border-abyssal transition-all">
+          <span>Consultar Agenda</span>
+          <span class="text-xs leading-none">↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+       1. HERO SECTION (DOBRA PRINCIPAL)
+  =========================================== -->
+  <section class="pt-28 pb-20 md:pt-36 md:pb-32 px-6 md:px-12 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Left Column: Copywriting & Value Proposition -->
+      <div class="lg:col-span-7 order-2 lg:order-1 flex flex-col items-start">
+        <div class="inline-flex items-center gap-3 mb-6">
+          <span class="w-8 h-[1px] bg-sapphire"></span>
+          <span class="text-[11px] tracking-editorial uppercase text-pewter font-normal">
+            Laser Ácrus HTM Tripla Onda • Botox (Toxina Botulínica)
+          </span>
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-[62px] text-abyssal font-light leading-[1.12] tracking-tight mb-8">
+          Pele lisinha, livre e bem cuidada. <br />
+          <span class="italic font-normal text-sapphire">Sem dor, natural</span> e duradoura.
+        </h1>
+
+        <p class="text-pewter text-base md:text-[17px] leading-[1.8] max-w-xl mb-10 font-light">
+          Sessões de <strong class="font-normal text-abyssal">Depilação a Laser com o aparelho Ácrus HTM</strong> (com ponteira gelada a até -10°C para o seu conforto) e aplicação de <strong class="font-normal text-abyssal">Botox (Toxina Botulínica)</strong> com resultado leve e natural. Através de uma <strong class="font-normal text-abyssal">agenda itinerante</strong>, a Blenda Benny atende a cada dia em uma clínica ou espaço parceiro diferente, pertinho de você.
+        </p>
+
+        <!-- Primary Delicate Outline CTA + Quick Botox Anchor -->
+        <div class="w-full sm:w-auto flex flex-col items-start gap-4">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
+            <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Gostaria%20de%20consultar%20a%20agenda%20e%20saber%20em%20qual%20local%20voc%C3%AA%20estar%C3%A1%20atendendo%20(Laser%20%2F%20Botox)."
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-luxury text-center">
+              <span>Consultar Agenda &amp; Local</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+              </svg>
+            </a>
+            <a href="#botox"
+               class="inline-flex items-center justify-center gap-2 border border-silver hover:border-abyssal text-abyssal px-6 py-4 text-[11px] tracking-[0.2em] uppercase transition-all text-center">
+              <span>Conhecer o Botox</span>
+              <span>↓</span>
+            </a>
+          </div>
+          <p class="text-[11px] tracking-widest uppercase text-pewter/80 pl-1">
+            Atendimento com Hora Marcada • WhatsApp (34) 99138-5422
+          </p>
+        </div>
+
+        <!-- Subtle Metrics / Quiet Credentials -->
+        <div class="grid grid-cols-3 gap-6 md:gap-12 w-full mt-14 pt-10 hairline-t">
+          <div>
+            <p class="font-serif text-2xl md:text-3xl text-abyssal font-normal">Até -10°C</p>
+            <p class="text-[11px] tracking-wider uppercase text-pewter mt-1">Ponteira Gelada no Laser</p>
+          </div>
+          <div>
+            <p class="font-serif text-2xl md:text-3xl text-abyssal font-normal">3 <span class="italic text-lg">Lasers</span></p>
+            <p class="text-[11px] tracking-wider uppercase text-pewter mt-1">No Mesmo Disparo (Tripla Onda)</p>
+          </div>
+          <div>
+            <p class="font-serif text-2xl md:text-3xl text-abyssal font-normal">Botox <span class="italic text-lg">Natural</span></p>
+            <p class="text-[11px] tracking-wider uppercase text-pewter mt-1">Rosto Descansado e Leve</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Editorial Skin Photography + Brand Monogram Badge -->
+      <div class="lg:col-span-5 order-1 lg:order-2 relative">
+        <div class="editorial-frame aspect-[4/5] w-full hairline-box p-2 bg-white">
+          <div class="w-full h-full overflow-hidden relative bg-glacial">
+            <img src="assets/hero-skin.jpg"
+                 onerror="this.src='https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=85'"
+                 alt="Pele natural iluminada com suavidade e frescor - Blenda Benny Laser & Botox"
+                 class="w-full h-full object-cover object-center filter contrast-[0.98] saturate-[0.85]" />
+            <div class="absolute inset-0 bg-gradient-to-t from-abyssal/25 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white">
+              <div>
+                <p class="text-[10px] tracking-editorial uppercase opacity-80">Blenda Benny • Depilação a Laser &amp; Estética</p>
+                <p class="font-serif italic text-lg">Precisão em Laser &amp; Toxina Botulínica</p>
+              </div>
+              <span class="text-[10px] tracking-widest uppercase border border-white/40 px-2.5 py-1 backdrop-blur-sm">
+                Laser &amp; Botox
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       2. SOBRE A TECNOLOGIA E EXPERIÊNCIA (ÁCRUS HTM)
+  =========================================== -->
+  <section id="tecnologia" class="bg-glacial py-24 md:py-36 hairline-t hairline-b">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 md:mb-24">
+        <span class="text-[11px] tracking-editorial uppercase text-pewter block mb-4">
+          Como Funciona a Depilação a Laser
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-abyssal font-light leading-[1.18]">
+          Tecnologia <span class="italic font-normal">Ácrus HTM Tripla Onda:</span> eficiente, rápida e confortável.
+        </h2>
+      </div>
+
+      <!-- Content Grid: Equipment Showcase + 3 Editorial Pillars -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left: Ácrus HTM Official Equipment Card -->
+        <div class="lg:col-span-5 bg-white hairline-box p-6 md:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 hairline-b">
+            <div>
+              <span class="text-[10px] tracking-editorial uppercase text-pewter block">Aparelho Oficial Certificado pela ANVISA</span>
+              <h3 class="font-serif text-2xl text-abyssal font-normal">Ácrus — Tripla Onda HTM</h3>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="switchTechImage('completo')" id="btn-img-completo" class="text-[10px] tracking-widest uppercase px-2.5 py-1 border border-abyssal bg-abyssal text-white transition-all">
+                Visão Completa
+              </button>
+              <button onclick="switchTechImage('console')" id="btn-img-console" class="text-[10px] tracking-widest uppercase px-2.5 py-1 border border-silver text-pewter hover:border-abyssal transition-all">
+                Detalhe do Aparelho
+              </button>
+            </div>
+          </div>
+
+          <div class="aspect-square w-full overflow-hidden bg-white relative mb-6 hairline-box flex items-center justify-center p-4">
+            <img id="tech-showcase-img"
+                 src="assets/acrus-oficial.webp"
+                 alt="Aparelho de Depilação a Laser Ácrus HTM Oficial da Blenda Benny"
+                 class="w-full h-full object-contain object-center transition-transform duration-700 ease-out" />
+          </div>
+
+          <p class="text-xs text-pewter leading-relaxed font-light">
+            O <strong class="font-normal text-abyssal">Ácrus da HTM Eletrônica</strong> possui o aplicador <strong class="font-normal text-abyssal">Tripla Onda</strong>, que une <strong class="font-normal text-abyssal">3 tipos de laser no mesmo disparo</strong> (<span class="text-abyssal">Alexandrite 755nm, Diodo 808nm e Nd:YAG 1064nm</span>). Na prática, ele alcança desde os pelos mais finos até os mais grossos e profundos de uma só vez.
+          </p>
+        </div>
+
+        <!-- Right: Narrative & 3 Pillars -->
+        <div class="lg:col-span-7 flex flex-col justify-between">
+          <p class="text-pewter text-base md:text-lg leading-[1.85] mb-12 font-light">
+            Muitas pessoas deixam de fazer depilação a laser por medo de sentir dor. Com o aparelho <strong class="font-normal text-abyssal">Ácrus HTM</strong> utilizado por <strong class="font-normal text-abyssal">Blenda Benny</strong>, a experiência é diferente: a ponteira desliza gelada sobre a pele, tornando a sessão rápida, tranquila e muito mais confortável do início ao fim.
+          </p>
+
+          <!-- Pillar 01 -->
+          <div class="py-8 hairline-t flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
+            <span class="font-serif italic text-3xl text-sapphire/60 font-light leading-none">01</span>
+            <div>
+              <h4 class="font-serif text-2xl text-abyssal font-normal mb-2">
+                Ponteira Super-Resfriada até -10°C (Mais Conforto)
+              </h4>
+              <p class="text-pewter text-sm md:text-[15px] leading-[1.75] font-light">
+                O aplicador conta com um sistema inteligente de resfriamento que deixa a ponteira gelada a <strong class="font-normal text-abyssal">até -10°C</strong>. Esse toque geladinho protege a pele e diminui muito a sensação de calor do disparo, garantindo uma aplicação suave e praticamente sem dor.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 02 -->
+          <div class="py-8 hairline-t flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
+            <span class="font-serif italic text-3xl text-sapphire/60 font-light leading-none">02</span>
+            <div>
+              <h4 class="font-serif text-2xl text-abyssal font-normal mb-2">
+                Seguro para Todos os Tons de Pele (Claras, Morenas e Negras)
+              </h4>
+              <p class="text-pewter text-sm md:text-[15px] leading-[1.75] font-light">
+                Por reunir 3 comprimentos de onda diferentes no mesmo aparelho e ajustar a potência na tela para a cor da sua pele e espessura do seu pelo, o Ácrus trata com total segurança todos os tons de pele — da pele bem clara à pele negra.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 03 -->
+          <div class="py-8 hairline-t hairline-b flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
+            <span class="font-serif italic text-3xl text-sapphire/60 font-light leading-none">03</span>
+            <div>
+              <h4 class="font-serif text-2xl text-abyssal font-normal mb-2">
+                Sessões Rápidas e Fim dos Pelos Encravados
+              </h4>
+              <p class="text-pewter text-sm md:text-[15px] leading-[1.75] font-light">
+                O aparelho permite aplicar tanto ponto a ponto (em áreas pequenas como o buço) quanto em movimento contínuo (em áreas maiores como as pernas). Desde as primeiras sessões, você já nota a pele mais lisa, macia e livre de foliculite (pelos encravados).
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       2.5. BOTOX / TOXINA BOTULÍNICA (QUIET REJUVENATION)
+  =========================================== -->
+  <section id="botox" class="py-24 md:py-36 px-6 md:px-12 max-w-7xl mx-auto hairline-b">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+      <!-- Left: Narrative & 3 Pillars of Botox Application -->
+      <div class="lg:col-span-7 order-2 lg:order-1">
+        <span class="text-[11px] tracking-editorial uppercase text-pewter block mb-4">
+          Toxina Botulínica • Botox com Naturalidade
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-abyssal font-light leading-[1.18] mb-8">
+          A beleza do rosto descansado. <span class="italic font-normal text-sapphire">Sem exageros,</span> 100% você.
+        </h2>
+
+        <p class="text-pewter text-base md:text-lg leading-[1.85] mb-10 font-light">
+          No atendimento de <strong class="font-normal text-abyssal">Blenda Benny</strong>, o <strong class="font-normal text-abyssal">Botox (Toxina Botulínica)</strong> é feito para deixar o seu rosto mais leve, jovem e descansado — nunca artificial ou "congelado". Avaliamos o movimento de cada ponto do seu rosto para suavizar linhas de expressão e prevenir novas rugas, mantendo o seu sorriso e o seu olhar totalmente naturais.
+        </p>
+
+        <!-- Botox Pillar 01 -->
+        <div class="py-6 hairline-t flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
+          <span class="font-serif italic text-3xl text-sapphire/60 font-light leading-none">01</span>
+          <div>
+            <h3 class="font-serif text-2xl text-abyssal font-normal mb-1.5">
+              Resultado Natural e Sob Medida para o Seu Rosto
+            </h3>
+            <p class="text-pewter text-sm md:text-[15px] leading-[1.75] font-light">
+              Cada rosto é único. Aplicamos a quantidade exata para suavizar as linhas da testa, o franzido entre as sobrancelhas e os famosos "pés de galinha" ao redor dos olhos, deixando a pele lisinha sem tirar a sua expressão.
+            </p>
+          </div>
+        </div>
+
+        <!-- Botox Pillar 02 -->
+        <div class="py-6 hairline-t flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
+          <span class="font-serif italic text-3xl text-sapphire/60 font-light leading-none">02</span>
+          <div>
+            <h3 class="font-serif text-2xl text-abyssal font-normal mb-1.5">
+              Prevenção de Rugas, Bruxismo e Controle do Suor
+            </h3>
+            <p class="text-pewter text-sm md:text-[15px] leading-[1.75] font-light">
+              Além de rejuvenescer o rosto e melhorar o contorno do pescoço, o Botox também é excelente para prevenir rugas em peles jovens, corrigir o sorriso gengival, aliviar a dor do bruxismo (apertamento dos dentes) e controlar o suor excessivo nas axilas e mãos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Botox Pillar 03 -->
+        <div class="py-6 hairline-t hairline-b flex flex-col sm:flex-row gap-4 sm:gap-8 items-start mb-10">
+          <span class="font-serif italic text-3xl text-sapphire/60 font-light leading-none">03</span>
+          <div>
+            <h3 class="font-serif text-2xl text-abyssal font-normal mb-1.5">
+              Mão Leve, Conforto e Retorno de Avaliação
+            </h3>
+            <p class="text-pewter text-sm md:text-[15px] leading-[1.75] font-light">
+              Usamos agulhas superfinas e pomada anestésica para que a aplicação seja rápida e tranquila, além de incluir o acompanhamento de retorno para garantir que tudo fique perfeito.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Gostaria%20de%20saber%20mais%20sobre%20a%20aplica%C3%A7%C3%A3o%20de%20Botox%20(Toxina%20Botul%C3%ADnica)%20e%20consultar%20sua%20agenda."
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-luxury text-center">
+            <span>Agendar Avaliação de Botox no WhatsApp</span>
+            <span>↗</span>
+          </a>
+          <a href="#protocolos-botox"
+             class="inline-flex items-center justify-center gap-2 border border-silver hover:border-abyssal text-abyssal px-6 py-4 text-[11px] tracking-[0.2em] uppercase transition-all text-center">
+            <span>Ver Áreas de Botox</span>
+            <span>↓</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Editorial Botox Photography Card -->
+      <div class="lg:col-span-5 order-1 lg:order-2">
+        <div class="editorial-frame aspect-[3/4] w-full hairline-box p-2 bg-white">
+          <div class="w-full h-full overflow-hidden relative bg-glacial">
+            <img src="assets/botox-editorial.jpg"
+                 onerror="this.src='assets/hero-skin.jpg'"
+                 alt="Aplicação de Botox (Toxina Botulínica) de alta precisão e naturalidade - Blenda Benny"
+                 class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-t from-abyssal/40 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white">
+              <div>
+                <p class="text-[10px] tracking-editorial uppercase opacity-85">Toxina Botulínica Premium</p>
+                <p class="font-serif italic text-xl">Rejuvenescimento silencioso &amp; natural</p>
+              </div>
+              <span class="text-[10px] tracking-widest uppercase border border-white/40 px-2.5 py-1 backdrop-blur-sm">
+                Botox
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       3. MENU DE TRATAMENTOS (CURADORIA DE ÁREAS: LASER & BOTOX)
+  =========================================== -->
+  <section id="protocolos" class="py-24 md:py-36 px-6 md:px-12 max-w-7xl mx-auto">
+    
+    <!-- Section Title -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <span class="text-[11px] tracking-editorial uppercase text-pewter block mb-4">
+          Curadoria de Protocolos • Laser &amp; Botox
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-abyssal font-light leading-tight">
+          Precisão desenhada para <span class="italic font-normal">cada contorno.</span>
+        </h2>
+      </div>
+      <p class="text-pewter text-sm md:text-[15px] max-w-md font-light">
+        Toque nas opções de <strong class="font-normal text-abyssal">Depilação a Laser</strong> ou <strong class="font-normal text-abyssal">Botox (Toxina Botulínica)</strong> abaixo para montar seu protocolo personalizado e enviá-lo diretamente para nosso WhatsApp.
+      </p>
+    </div>
+
+    <!-- Category Subheader 01: Depilação a Laser Ácrus HTM + Abas Feminino / Masculino -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-4 hairline-b">
+      <div class="flex items-center gap-4">
+        <span class="text-[11px] tracking-editorial uppercase text-abyssal font-normal">
+          01 • Áreas de Depilação a Laser (Ácrus HTM)
+        </span>
+      </div>
+
+      <!-- Gender Tabs: Feminino & Masculino -->
+      <div class="inline-flex border border-silver bg-glacial p-1 self-start sm:self-auto">
+        <button id="tab-btn-feminino"
+                onclick="switchLaserTab('feminino')"
+                class="px-5 py-2 text-[11px] tracking-editorial uppercase transition-all bg-abyssal text-white font-normal">
+          Feminino (14 Áreas)
+        </button>
+        <button id="tab-btn-masculino"
+                onclick="switchLaserTab('masculino')"
+                class="px-5 py-2 text-[11px] tracking-editorial uppercase transition-all text-pewter hover:text-abyssal font-normal">
+          Masculino (13 Áreas)
+        </button>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         ABA 1: LASER FEMININO (14 ÁREAS OFICIAIS)
+    =========================================== -->
+    <div id="laser-tab-feminino" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+      <!-- Feminino Card 1: Facial & Superiores -->
+      <div class="hairline-box p-7 md:p-8 flex flex-col justify-between bg-white">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <svg class="w-8 h-8 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M24 6C16 6 11 13 11 22C11 31 16 39 24 42C32 39 37 31 37 22C37 13 32 6 24 6Z" stroke-linecap="round"/>
+              <path d="M21 31C22.8 32.2 25.2 32.2 27 31" stroke-linecap="round"/>
+            </svg>
+            <span class="text-[10px] tracking-widest uppercase text-pewter">
+              Toque para selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-2">
+            Facial &amp; Membros Superiores
+          </h3>
+          <p class="text-xs text-pewter font-light mb-5">
+            Delicadeza com ponteira de safira resfriada para áreas sensíveis.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Rosto')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Rosto</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Buço')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Buço</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Axilas')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Axilas</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Braços')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Braços</button>
+          </div>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Feminino</span>
+          <span class="italic font-serif text-sm text-abyssal">Zero foliculite</span>
+        </div>
+      </div>
+
+      <!-- Feminino Card 2: Tronco & Corporal -->
+      <div class="hairline-box p-7 md:p-8 flex flex-col justify-between bg-white">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <svg class="w-8 h-8 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M6 34C6 25 13 20 24 20C35 20 42 25 42 34" stroke-linecap="round"/>
+              <path d="M18 10C18 15 20.5 18 24 18C27.5 18 30 15 30 10" stroke-linecap="round"/>
+              <path d="M13 24C17 26.5 21 27 24 27C27 27 31 26.5 35 24" stroke-linecap="round"/>
+            </svg>
+            <span class="text-[10px] tracking-widest uppercase text-pewter">
+              Toque para selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-2">
+            Tronco &amp; Linha Corporal
+          </h3>
+          <p class="text-xs text-pewter font-light mb-5">
+            Pele uniforme, lisa e livre de pelos encravados em todo o tronco.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Seios')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Seios</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Barriga')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Barriga</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Linha alba')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Linha alba</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Costas')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Costas</button>
+          </div>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Feminino</span>
+          <span class="italic font-serif text-sm text-abyssal">Ponteira até -10°C</span>
+        </div>
+      </div>
+
+      <!-- Feminino Card 3: Íntimo & Membros Inferiores -->
+      <div class="hairline-box p-7 md:p-8 flex flex-col justify-between bg-white">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <svg class="w-8 h-8 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M17 8C16 18 15 28 18 40" stroke-linecap="round"/>
+              <path d="M31 8C32 18 33 28 30 40" stroke-linecap="round"/>
+              <path d="M16 16C21 19 27 19 32 16" stroke-linecap="round"/>
+            </svg>
+            <span class="text-[10px] tracking-widest uppercase text-pewter">
+              Toque para selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-2">
+            Íntimo, Glúteos &amp; Pernas
+          </h3>
+          <p class="text-xs text-pewter font-light mb-5">
+            Conforto térmico absoluto e liberdade definitiva o ano inteiro.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Virilha simples')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Virilha simples</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Virilha completa')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Virilha completa</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Glúteos')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Glúteos</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Coxas')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Coxas</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Meia perna')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Meia perna</button>
+            <button type="button" onclick="togglePill(this, 'Laser Feminino: Pernas inteiras')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Pernas inteiras</button>
+          </div>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Feminino</span>
+          <span class="italic font-serif text-sm text-abyssal">Alta precisão</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==========================================
+         ABA 2: LASER MASCULINO (13 ÁREAS OFICIAIS)
+    =========================================== -->
+    <div id="laser-tab-masculino" class="hidden grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+      <!-- Masculino Card 1: Barba & Rosto Masculino -->
+      <div class="hairline-box p-7 md:p-8 flex flex-col justify-between bg-white">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <svg class="w-8 h-8 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M13 14C14 26 18 33 24 35C30 33 34 26 35 14" stroke-linecap="round"/>
+              <path d="M19 34V42M29 34V42" stroke-linecap="round"/>
+            </svg>
+            <span class="text-[10px] tracking-widest uppercase text-pewter">
+              Toque para selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-2">
+            Barba, Maxilar &amp; Face
+          </h3>
+          <p class="text-xs text-pewter font-light mb-5">
+            Definição impecável do desenho da barba e fim definitivo da foliculite pós-barba.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Barba')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Barba</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Contorno de Barba')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Contorno de Barba</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Maxilar')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Maxilar</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Orelha')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Orelha</button>
+          </div>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Masculino</span>
+          <span class="italic font-serif text-sm text-abyssal">Crioproteção intensiva</span>
+        </div>
+      </div>
+
+      <!-- Masculino Card 2: Tronco & Braços Masculino -->
+      <div class="hairline-box p-7 md:p-8 flex flex-col justify-between bg-white">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <svg class="w-8 h-8 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M8 18C14 14 34 14 40 18" stroke-linecap="round"/>
+              <path d="M14 18L17 40M34 18L31 40" stroke-linecap="round"/>
+              <path d="M24 18V36" stroke-linecap="round"/>
+            </svg>
+            <span class="text-[10px] tracking-widest uppercase text-pewter">
+              Toque para selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-2">
+            Tronco, Costas &amp; Braços
+          </h3>
+          <p class="text-xs text-pewter font-light mb-5">
+            Alta potência para fios mais espessos e profundos com ponteira de safira super-resfriada.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Peito')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Peito</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Barriga')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Barriga</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Costas')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Costas</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Braços')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Braços</button>
+          </div>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Masculino</span>
+          <span class="italic font-serif text-sm text-abyssal">Ponteira até -10°C</span>
+        </div>
+      </div>
+
+      <!-- Masculino Card 3: Íntimo, Glúteos & Pernas Masculino -->
+      <div class="hairline-box p-7 md:p-8 flex flex-col justify-between bg-white">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <svg class="w-8 h-8 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M17 8C16 18 15 28 18 40" stroke-linecap="round"/>
+              <path d="M31 8C32 18 33 28 30 40" stroke-linecap="round"/>
+              <path d="M16 16C21 19 27 19 32 16" stroke-linecap="round"/>
+            </svg>
+            <span class="text-[10px] tracking-widest uppercase text-pewter">
+              Toque para selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-2">
+            Íntimo, Glúteos &amp; Pernas
+          </h3>
+          <p class="text-xs text-pewter font-light mb-5">
+            Conforto térmico, praticidade para o esporte e liberdade no dia a dia.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Virilha simples')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Virilha simples</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Virilha completa')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Virilha completa</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Glúteos')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Glúteos</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Meia perna')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Meia perna</button>
+            <button type="button" onclick="togglePill(this, 'Laser Masculino: Pernas inteiras')" class="area-pill text-xs px-3.5 py-2 border border-silver text-abyssal font-light">Pernas inteiras</button>
+          </div>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Masculino</span>
+          <span class="italic font-serif text-sm text-abyssal">Performance &amp; Conforto</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Category Subheader 02: Botox (Toxina Botulínica) -->
+    <div id="protocolos-botox" class="flex items-center gap-4 mb-6 pt-4">
+      <span class="text-[11px] tracking-editorial uppercase text-abyssal font-normal">
+        02 • Botox — Toxina Botulínica (Facial &amp; Terapêutico)
+      </span>
+      <div class="h-[1px] bg-silver flex-1"></div>
+    </div>
+
+    <!-- 4 Fine-Line Minimalist Botox Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+
+      <!-- Botox Card 1: Testa e Área dos Olhos -->
+      <div class="area-card hairline-box p-8 flex flex-col justify-between bg-white"
+           onclick="toggleArea(this, 'Botox: Testa, Entre as Sobrancelhas e Pés de Galinha')">
+        <div>
+          <div class="flex items-center justify-between mb-8">
+            <svg class="w-9 h-9 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M10 22C14 17 20 15 24 15C28 15 34 17 38 22" stroke-linecap="round"/>
+              <path d="M14 28C17 25 21 25 23 28" stroke-linecap="round"/>
+              <path d="M25 28C27 25 31 25 34 28" stroke-linecap="round"/>
+              <path d="M24 11V19" stroke-linecap="round" stroke-dasharray="1.5 2.5"/>
+            </svg>
+            <span class="card-indicator text-[10px] tracking-widest uppercase px-2.5 py-1 border border-silver text-pewter transition-colors">
+              Selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-3">
+            Testa &amp; Área dos Olhos
+          </h3>
+          <p class="text-xs text-pewter leading-relaxed mb-6 font-light">
+            Linhas da Testa • Entre as Sobrancelhas (Glabela) • Pés de Galinha (Ao redor dos olhos)
+          </p>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Olhar descansado</span>
+          <span class="italic font-serif text-sm text-abyssal">Retorno incluso</span>
+        </div>
+      </div>
+
+      <!-- Botox Card 2: Botox Preventivo -->
+      <div class="area-card hairline-box p-8 flex flex-col justify-between bg-white"
+           onclick="toggleArea(this, 'Botox Preventivo (Suavização Leve e Natural)')">
+        <div>
+          <div class="flex items-center justify-between mb-8">
+            <svg class="w-9 h-9 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M24 8L27.5 18.5L38 22L27.5 25.5L24 36L20.5 25.5L10 22L20.5 18.5L24 8Z" stroke-linejoin="round"/>
+              <circle cx="24" cy="22" r="2"/>
+            </svg>
+            <span class="card-indicator text-[10px] tracking-widest uppercase px-2.5 py-1 border border-silver text-pewter transition-colors">
+              Selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-3">
+            Botox Preventivo
+          </h3>
+          <p class="text-xs text-pewter leading-relaxed mb-6 font-light">
+            Aplicação suave para evitar que as linhas finas virem rugas marcadas, mantendo a expressão 100% natural.
+          </p>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Prevenção leve</span>
+          <span class="italic font-serif text-sm text-abyssal">Pele lisinha</span>
+        </div>
+      </div>
+
+      <!-- Botox Card 3: Pescoço, Sorriso e Bruxismo -->
+      <div class="area-card hairline-box p-8 flex flex-col justify-between bg-white"
+           onclick="toggleArea(this, 'Botox: Contorno do Rosto, Pescoço, Sorriso Gengival ou Bruxismo')">
+        <div>
+          <div class="flex items-center justify-between mb-8">
+            <svg class="w-9 h-9 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M13 14C14 26 18 33 24 35C30 33 34 26 35 14" stroke-linecap="round"/>
+              <path d="M19 34V42M29 34V42" stroke-linecap="round"/>
+              <path d="M20 26C22 27.5 26 27.5 28 26" stroke-linecap="round"/>
+            </svg>
+            <span class="card-indicator text-[10px] tracking-widest uppercase px-2.5 py-1 border border-silver text-pewter transition-colors">
+              Selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-3">
+            Pescoço, Sorriso &amp; Bruxismo
+          </h3>
+          <p class="text-xs text-pewter leading-relaxed mb-6 font-light">
+            Contorno do Rosto e Pescoço • Sorriso Gengival • Queixo • Alívio do Bruxismo (Apertamento dos dentes)
+          </p>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Harmonia &amp; Alívio</span>
+          <span class="italic font-serif text-sm text-abyssal">Cuidado completo</span>
+        </div>
+      </div>
+
+      <!-- Botox Card 4: Rosto Completo & Controle do Suor -->
+      <div class="area-card hairline-box p-8 flex flex-col justify-between bg-white"
+           onclick="toggleArea(this, 'Botox: Rosto Completo ou Controle do Suor Excessivo (Axilas e Mãos)')">
+        <div>
+          <div class="flex items-center justify-between mb-8">
+            <svg class="w-9 h-9 text-sapphire" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1">
+              <path d="M24 8C24 8 13 21 13 29C13 35.1 17.9 40 24 40C30.1 40 35 35.1 35 29C35 21 24 8 24 8Z" stroke-linecap="round"/>
+              <path d="M19 29C19 32 21.2 34.5 24 34.5" stroke-linecap="round"/>
+            </svg>
+            <span class="card-indicator text-[10px] tracking-widest uppercase px-2.5 py-1 border border-silver text-pewter transition-colors">
+              Selecionar
+            </span>
+          </div>
+
+          <h3 class="font-serif text-2xl text-abyssal font-normal mb-3">
+            Rosto Completo &amp; Suor
+          </h3>
+          <p class="text-xs text-pewter leading-relaxed mb-6 font-light">
+            Rejuvenescimento de todo o rosto ou tratamento para controlar o suor excessivo (Axilas e Mãos).
+          </p>
+        </div>
+
+        <div class="pt-4 hairline-t flex items-center justify-between text-[11px] text-pewter">
+          <span>Liberdade &amp; Conforto</span>
+          <span class="italic font-serif text-sm text-abyssal">Avaliação individual</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dynamic Protocol Bar -->
+    <div class="bg-glacial hairline-box p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <span class="text-[10px] tracking-editorial uppercase text-pewter block mb-1">
+          Seu Protocolo Sob Medida (Laser &amp; Botox)
+        </span>
+        <p id="selected-areas-text" class="font-serif text-xl md:text-2xl text-abyssal font-normal">
+          Selecione acima suas opções de Laser e/ou Botox para consultar valores e disponibilidade.
+        </p>
+      </div>
+      <a id="custom-protocol-cta"
+         href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Gostaria%20de%20montar%20meu%20protocolo%20personalizado%20de%20Laser%20e%2Fou%20Botox."
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn-luxury flex-shrink-0 w-full md:w-auto">
+        <span>Consultar Protocolo no WhatsApp</span>
+        <span>→</span>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       3.5. AGENDA ITINERANTE & LOCAIS DE ATENDIMENTO
+  =========================================== -->
+  <section id="agenda-itinerante" class="py-20 md:py-28 px-6 md:px-12 max-w-7xl mx-auto hairline-t">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Left: Explanation of the Itinerant Model -->
+      <div class="lg:col-span-6">
+        <span class="text-[11px] tracking-editorial uppercase text-pewter block mb-4">
+          Agenda Itinerante • Atendimento por Localidade
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-abyssal font-light leading-tight mb-6">
+          Onde estamos <span class="italic font-normal">atendendo hoje?</span>
+        </h2>
+        <p class="text-pewter text-base md:text-[16px] leading-[1.8] font-light mb-8">
+          Em vez de ter apenas um endereço fixo, <strong class="font-normal text-abyssal">Blenda Benny</strong> atende de forma <strong class="font-normal text-abyssal">itinerante</strong>: a cada dia, ela leva o aparelho <strong class="font-normal text-abyssal">Ácrus HTM</strong> e o atendimento de <strong class="font-normal text-abyssal">Botox (Toxina Botulínica)</strong> para uma clínica, estúdio ou espaço parceiro diferente. Assim, você pode ser atendida no local mais próximo de você.
+        </p>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-4 p-4 bg-glacial hairline-box">
+            <span class="font-serif italic text-xl text-sapphire leading-none mt-0.5">01</span>
+            <div>
+              <h3 class="text-xs tracking-wideLux uppercase text-abyssal font-normal mb-1">Consulte o Local e a Data pelo WhatsApp</h3>
+              <p class="text-xs text-pewter font-light leading-relaxed">
+                Mande uma mensagem rápida dizendo seu bairro ou cidade para saber em qual espaço parceiro a Blenda estará atendendo.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-glacial hairline-box">
+            <span class="font-serif italic text-xl text-sapphire leading-none mt-0.5">02</span>
+            <div>
+              <h3 class="text-xs tracking-wideLux uppercase text-abyssal font-normal mb-1">Atendimento Exclusivo com Hora Marcada</h3>
+              <p class="text-xs text-pewter font-light leading-relaxed">
+                Como cada espaço parceiro recebe o atendimento em dias específicos da semana ou do mês, os horários são agendados com antecedência e vagas limitadas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Gostaria%20de%20saber%20em%20quais%20locais%20e%20datas%20voc%C3%AA%20estar%C3%A1%20atendendo%20nesta%20semana%20(Laser%20%2F%20Botox)."
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-luxury text-center">
+            <span>Verificar Agenda &amp; Locais no WhatsApp</span>
+            <span>↗</span>
+          </a>
+          <a href="https://www.instagram.com/blebsp/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2.5 border border-silver hover:border-abyssal text-abyssal px-6 py-4 text-[11px] tracking-[0.2em] uppercase transition-all text-center">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>Acompanhar @blebsp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Visual Card with Official Mobile Case & Partner Clinic Invite -->
+      <div class="lg:col-span-6">
+        <div class="bg-glacial hairline-box p-6 md:p-10">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-white hairline-box mb-6 flex items-center justify-center p-4">
+            <img src="assets/acrus-oficial.webp"
+                 alt="Aparelho Oficial Ácrus HTM com Case Móvel para Atendimento Itinerante"
+                 class="w-full h-full object-contain object-center" />
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+            <div>
+              <span class="text-[10px] tracking-editorial uppercase text-pewter block mb-1">
+                Para Clínicas, Salões &amp; Estúdios
+              </span>
+              <h3 class="font-serif text-2xl text-abyssal font-normal">
+                Quer levar esse atendimento para o seu espaço?
+              </h3>
+              <p class="text-xs text-pewter font-light mt-1">
+                Ofereça Depilação a Laser Ácrus HTM e Botox com a Blenda Benny para as clientes da sua clínica ou salão parceiro.
+              </p>
+            </div>
+            <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Tenho%20um%20espa%C3%A7o%2Fcl%C3%ADnica%20e%20gostaria%20de%20saber%20como%20funciona%20a%20parceria%20para%20receber%20o%20seu%20atendimento%20de%20Laser%20e%20Botox."
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-[10px] tracking-widest uppercase text-abyssal border border-abyssal px-4 py-3 hover:bg-abyssal hover:text-white transition-all flex-shrink-0 text-center">
+              Parceria para Espaços ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       4. PROVA SOCIAL (EDITORIAL PULL-QUOTES)
+  =========================================== -->
+  <section id="experiencias" class="bg-glacial py-24 md:py-36 hairline-t hairline-b">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 md:mb-24">
+        <span class="text-[11px] tracking-editorial uppercase text-pewter block mb-4">
+          Relatos de Clientes
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-abyssal font-light">
+          O carinho e a confiança de quem já <span class="italic font-normal">é atendida pela Blenda.</span>
+        </h2>
+      </div>
+
+      <!-- Editorial 3-Column Pull-Quotes (No tacky stars or screenshots) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        
+        <!-- Quote 01 -->
+        <article class="bg-white hairline-box p-8 md:p-10 flex flex-col justify-between">
+          <div>
+            <span class="font-serif text-4xl text-sapphire/30 leading-none block mb-4">“</span>
+            <p class="font-serif italic text-xl md:text-[21px] text-abyssal leading-[1.6] font-light mb-8">
+              Eu adiava o laser há anos por medo de sentir dor. Com o aparelho Ácrus da Blenda, a ponteira é bem geladinha e quase não se sente nada. O cuidado e a delicadeza dela fizeram toda a diferença.
+            </p>
+          </div>
+          <div class="pt-5 hairline-t">
+            <p class="text-[11px] tracking-editorial uppercase text-abyssal font-normal">Carolina M.</p>
+            <p class="text-[11px] text-pewter mt-0.5">Depilação a Laser • Virilha &amp; Axilas</p>
+          </div>
+        </article>
+
+        <!-- Quote 02: Botox / Toxina Botulínica -->
+        <article class="bg-white hairline-box p-8 md:p-10 flex flex-col justify-between">
+          <div>
+            <span class="font-serif text-4xl text-sapphire/30 leading-none block mb-4">“</span>
+            <p class="font-serif italic text-xl md:text-[21px] text-abyssal leading-[1.6] font-light mb-8">
+              Meu maior receio com o Botox era ficar com o rosto sem expressão. A Blenda tem a mão super leve: suavizou as linhas da testa e ao redor dos olhos deixando meu rosto descansado e muito natural.
+            </p>
+          </div>
+          <div class="pt-5 hairline-t">
+            <p class="text-[11px] tracking-editorial uppercase text-abyssal font-normal">Beatriz V.</p>
+            <p class="text-[11px] text-pewter mt-0.5">Botox (Toxina Botulínica) • Testa e Olhos</p>
+          </div>
+        </article>
+
+        <!-- Quote 03 -->
+        <article class="bg-white hairline-box p-8 md:p-10 flex flex-col justify-between">
+          <div>
+            <span class="font-serif text-4xl text-sapphire/30 leading-none block mb-4">“</span>
+            <p class="font-serif italic text-xl md:text-[21px] text-abyssal leading-[1.6] font-light mb-8">
+              Faço tanto a depilação a laser quanto o Botox preventivo com a Blenda. Ela é super pontual, atenciosa e explica tudo com muita clareza. Minha pele nunca esteve tão lisinha e bem cuidada.
+            </p>
+          </div>
+          <div class="pt-5 hairline-t">
+            <p class="text-[11px] tracking-editorial uppercase text-abyssal font-normal">Fernanda L.</p>
+            <p class="text-[11px] text-pewter mt-0.5">Depilação a Laser &amp; Botox Preventivo</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Subtle Clinical Authority Bar -->
+      <div class="mt-16 pt-10 hairline-t flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-4 text-xs text-pewter tracking-wider uppercase">
+        <span>Aparelho Ácrus HTM (Resfriamento até -10°C) aprovado pela ANVISA</span>
+        <span class="hidden sm:inline text-silver">•</span>
+        <span>Botox com Resultado Leve e Natural</span>
+        <span class="hidden sm:inline text-silver">•</span>
+        <span>Higiene e Segurança Total</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       4.5. DÚVIDAS FREQUENTES (FAQ SIMPLES E DIRETO)
+  =========================================== -->
+  <section id="duvidas" class="py-20 md:py-28 px-6 md:px-12 max-w-4xl mx-auto hairline-b">
+    <div class="text-center mb-14">
+      <span class="text-[11px] tracking-editorial uppercase text-pewter block mb-4">
+        Tire Suas Dúvidas
+      </span>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-abyssal font-light">
+        Perguntas <span class="italic font-normal">Frequentes</span>
+      </h2>
+    </div>
+
+    <div class="divide-y divide-silver hairline-t hairline-b">
+      <!-- FAQ 1 -->
+      <details class="group py-6 cursor-pointer">
+        <summary class="flex items-center justify-between font-serif text-xl md:text-2xl text-abyssal font-normal list-none">
+          <span>A depilação a laser com o aparelho Ácrus HTM dói?</span>
+          <span class="text-pewter text-lg transition-transform duration-300 group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-pewter text-sm md:text-[15px] leading-relaxed font-light mt-4 pr-6">
+          É muito tranquila! O aparelho Ácrus HTM possui uma ponteira que fica super gelada (até -10°C) durante toda a sessão. Esse resfriamento protege a pele e alivia o calor na hora, tornando a aplicação muito confortável e praticamente sem dor.
+        </p>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="group py-6 cursor-pointer">
+        <summary class="flex items-center justify-between font-serif text-xl md:text-2xl text-abyssal font-normal list-none">
+          <span>Pode ser feito em pele morena ou negra?</span>
+          <span class="text-pewter text-lg transition-transform duration-300 group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-pewter text-sm md:text-[15px] leading-relaxed font-light mt-4 pr-6">
+          Sim, com total segurança! Como o aplicador Tripla Onda do Ácrus reúne 3 tipos de laser no mesmo disparo e é regulado especialmente para a cor da sua pele, ele atende desde peles bem claras até peles morenas e negras.
+        </p>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="group py-6 cursor-pointer">
+        <summary class="flex items-center justify-between font-serif text-xl md:text-2xl text-abyssal font-normal list-none">
+          <span>O Botox deixa o rosto artificial ou "congelado"?</span>
+          <span class="text-pewter text-lg transition-transform duration-300 group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-pewter text-sm md:text-[15px] leading-relaxed font-light mt-4 pr-6">
+          De forma alguma. O foco da Blenda Benny é a naturalidade: aplicamos a dose ideal nos pontos certos apenas para descansar o olhar e suavizar as linhas da testa e ao redor dos olhos, mantendo a sua expressão leve e natural. O efeito começa a aparecer entre 3 e 7 dias, atingindo o resultado completo em até 15 dias (quando fazemos a avaliação de retorno).
+        </p>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="group py-6 cursor-pointer">
+        <summary class="flex items-center justify-between font-serif text-xl md:text-2xl text-abyssal font-normal list-none">
+          <span>Como funciona o agendamento se não há endereço fixo?</span>
+          <span class="text-pewter text-lg transition-transform duration-300 group-open:rotate-45">+</span>
+        </summary>
+        <p class="text-pewter text-sm md:text-[15px] leading-relaxed font-light mt-4 pr-6">
+          A Blenda atende de forma itinerante: a cada dia ela leva o equipamento de laser e os atendimentos de Botox para uma clínica, salão ou estúdio parceiro diferente. Basta clicar no botão de WhatsApp e informar seu bairro ou cidade para ver em qual espaço parceiro mais próximo de você ela estará atendendo!
+        </p>
+      </details>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       5. CONVITE FINAL & RODAPÉ MINIMALISTA
+  =========================================== -->
+  <section class="py-24 md:py-32 px-6 md:px-12 text-center max-w-4xl mx-auto">
+    <span class="text-[11px] tracking-editorial uppercase text-pewter block mb-4">
+      Sua Pele Merece Esse Cuidado
+    </span>
+    <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-abyssal font-light leading-tight mb-6">
+      Pele livre, jovem e <span class="italic font-normal">natural o ano todo.</span>
+    </h2>
+    <p class="text-pewter text-base md:text-lg max-w-xl mx-auto mb-10 font-light leading-relaxed">
+      Converse diretamente com <strong class="font-normal text-abyssal">Blenda Benny</strong> pelo WhatsApp para verificar as próximas datas e locais de atendimento para <strong class="font-normal text-abyssal">Depilação a Laser</strong> e <strong class="font-normal text-abyssal">Botox (Toxina Botulínica)</strong>.
+    </p>
+    <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Quero%20agendar%20meu%20hor%C3%A1rio%20para%20Laser%20%2F%20Botox."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-luxury">
+      <span>Agendar Horário via WhatsApp • (34) 99138-5422</span>
+      <span>↗</span>
+    </a>
+  </section>
+
+  <!-- Deep Abyssal Slate Footer (Matches the official dark luxury BB Logo background) -->
+  <footer id="contato" class="bg-abyssal text-white pt-20 pb-14 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10 items-start">
+        
+        <!-- Brand Column with Official Full Logo -->
+        <div class="md:col-span-5 flex flex-col items-start">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="assets/logo-crop.jpg"
+                 alt="Blenda Benny Laser Monograma"
+                 class="w-20 h-20 object-contain rounded-sm border border-white/10" />
+            <div>
+              <h3 class="font-serif text-2xl tracking-wider text-white font-normal">
+                BLENDA BENNY
+              </h3>
+              <p class="text-[10px] tracking-[0.28em] uppercase text-champagne mt-1">
+                Depilação a Laser &amp; Estética
+              </p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm font-light max-w-sm leading-relaxed">
+            Depilação a laser confortável com o aparelho Ácrus HTM (ponteira gelada até -10°C) e aplicação de Botox (Toxina Botulínica) com resultado leve, seguro e natural.
+          </p>
+        </div>
+
+        <!-- Contact / WhatsApp & Instagram Concierge -->
+        <div class="md:col-span-4 space-y-3">
+          <p class="text-[10px] tracking-editorial uppercase text-white/40 mb-4">
+            Agenda Itinerante &amp; Canais Oficiais
+          </p>
+          <p class="text-sm text-white/80 font-light">
+            Atendimento em clínicas e espaços parceiros selecionados (cada dia em uma unidade diferente).
+          </p>
+          <div class="pt-1 flex flex-col gap-1.5">
+            <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20em%20qual%20local%20voc%C3%AA%20est%C3%A1%20atendendo%20e%20agendar%20uma%20sess%C3%A3o."
+               target="_blank"
+               rel="noopener noreferrer"
+               class="font-serif text-2xl text-white hover:text-champagne transition-colors">
+              (34) 99138-5422
+            </a>
+            <a href="https://www.instagram.com/blebsp/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-champagne hover:text-white transition-colors">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>Instagram • @blebsp</span>
+            </a>
+          </div>
+          <div class="pt-3 flex flex-wrap gap-3">
+            <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20em%20qual%20local%20voc%C3%AA%20est%C3%A1%20atendendo%20e%20agendar%20uma%20sess%C3%A3o."
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-luxury-light !py-3 !px-6 !text-[10px]">
+              Consultar Local &amp; Agendar ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Technology & Quick Navigation -->
+        <div class="md:col-span-3 space-y-3">
+          <p class="text-[10px] tracking-editorial uppercase text-white/40 mb-4">
+            Navegação Silenciosa
+          </p>
+          <ul class="space-y-2.5 text-xs tracking-wider uppercase text-white/70 font-light">
+            <li><a href="#tecnologia" class="hover:text-white transition-colors">Laser Ácrus HTM</a></li>
+            <li><a href="#botox" class="hover:text-white transition-colors">Botox (Toxina Botulínica)</a></li>
+            <li><a href="#protocolos" class="hover:text-white transition-colors">Áreas &amp; Procedimentos</a></li>
+            <li><a href="#agenda-itinerante" class="hover:text-white transition-colors">Agenda Itinerante &amp; Locais</a></li>
+            <li><a href="#duvidas" class="hover:text-white transition-colors">Perguntas Frequentes</a></li>
+            <li><a href="https://www.instagram.com/blebsp/" target="_blank" rel="noopener noreferrer" class="hover:text-champagne transition-colors">Instagram @blebsp ↗</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-white/40 tracking-wider">
+        <p>© 2026 Blenda Benny — Depilação a Laser &amp; Estética. Todos os direitos reservados.</p>
+        <p>Tecnologia Ácrus HTM Tripla Onda &amp; Botox (Toxina Botulínica)</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante Discreto de WhatsApp (Mobile & Desktop) -->
+  <a href="https://wa.me/5534991385422?text=Ol%C3%A1%2C%20Blenda!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20em%20qual%20local%20voc%C3%AA%20est%C3%A1%20atendendo%20e%20agendar%20meu%20hor%C3%A1rio."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Falar com Blenda Benny no WhatsApp"
+     class="fixed bottom-5 right-5 z-50 bg-abyssal text-white border border-white/20 px-4 py-3 shadow-lg flex items-center gap-2.5 hover:bg-sapphire transition-all group">
+    <svg class="w-4 h-4 text-champagne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+    </svg>
+    <span class="text-[10px] tracking-[0.2em] uppercase font-normal">WhatsApp</span>
+  </a>
+
+
+  <!-- Interactive Scripts for Protocol Selection & Equipment Image Switcher -->
+  <script>
+    const selectedAreas = new Set();
+    const baseWhatsApp = "https://wa.me/5534991385422?text=";
+
+    function toggleArea(cardElement, areaName) {
+      cardElement.classList.toggle('active');
+      const indicator = cardElement.querySelector('.card-indicator');
+
+      if (selectedAreas.has(areaName)) {
+        selectedAreas.delete(areaName);
+        if (indicator) indicator.textContent = 'Selecionar';
+      } else {
+        selectedAreas.add(areaName);
+        if (indicator) indicator.textContent = 'Selecionado ✓';
+      }
+
+      updateProtocolBar();
+    }
+
+    function togglePill(btnElement, areaName) {
+      btnElement.classList.toggle('active');
+      if (selectedAreas.has(areaName)) {
+        selectedAreas.delete(areaName);
+      } else {
+        selectedAreas.add(areaName);
+      }
+      updateProtocolBar();
+    }
+
+    function switchLaserTab(gender) {
+      const tabFem = document.getElementById('laser-tab-feminino');
+      const tabMasc = document.getElementById('laser-tab-masculino');
+      const btnFem = document.getElementById('tab-btn-feminino');
+      const btnMasc = document.getElementById('tab-btn-masculino');
+
+      const activeTabClass = "px-5 py-2 text-[11px] tracking-editorial uppercase transition-all bg-abyssal text-white font-normal";
+      const inactiveTabClass = "px-5 py-2 text-[11px] tracking-editorial uppercase transition-all text-pewter hover:text-abyssal font-normal";
+
+      if (gender === 'masculino') {
+        tabFem.classList.add('hidden');
+        tabFem.classList.remove('grid');
+        tabMasc.classList.remove('hidden');
+        tabMasc.classList.add('grid');
+        btnMasc.className = activeTabClass;
+        btnFem.className = inactiveTabClass;
+      } else {
+        tabMasc.classList.add('hidden');
+        tabMasc.classList.remove('grid');
+        tabFem.classList.remove('hidden');
+        tabFem.classList.add('grid');
+        btnFem.className = activeTabClass;
+        btnMasc.className = inactiveTabClass;
+      }
+    }
+
+    function updateProtocolBar() {
+      const textEl = document.getElementById('selected-areas-text');
+      const ctaEl = document.getElementById('custom-protocol-cta');
+
+      if (selectedAreas.size === 0) {
+        textEl.textContent = "Selecione acima suas opções de Laser e/ou Botox para consultar valores e disponibilidade.";
+        ctaEl.href = baseWhatsApp + encodeURIComponent("Olá, Blenda! Gostaria de montar meu protocolo personalizado de Laser e/ou Botox.");
+      } else {
+        const list = Array.from(selectedAreas).join(' + ');
+        textEl.textContent = "Selecionado: " + list;
+        const msg = `Olá, Blenda! Vim pelo site e gostaria de saber mais sobre o protocolo para: ${list}.`;
+        ctaEl.href = baseWhatsApp + encodeURIComponent(msg);
+      }
+    }
+
+    function switchTechImage(mode) {
+      const img = document.getElementById('tech-showcase-img');
+      const btnComp = document.getElementById('btn-img-completo');
+      const btnCons = document.getElementById('btn-img-console');
+
+      const activeClass = "text-[10px] tracking-widest uppercase px-2.5 py-1 border border-abyssal bg-abyssal text-white transition-all";
+      const inactiveClass = "text-[10px] tracking-widest uppercase px-2.5 py-1 border border-silver text-pewter hover:border-abyssal transition-all";
+
+      if (mode === 'console') {
+        img.style.transform = 'scale(1.65) translateY(14%)';
+        btnCons.className = activeClass;
+        btnComp.className = inactiveClass;
+      } else {
+        img.style.transform = 'scale(1) translateY(0)';
+        btnComp.className = activeClass;
+        btnCons.className = inactiveClass;
+      }
+    }
+  </script>
+
+</body>
+</html>
